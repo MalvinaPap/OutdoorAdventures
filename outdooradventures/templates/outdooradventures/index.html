@@ -1,0 +1,103 @@
+{% extends "outdooradventures/base.html" %}
+
+
+{% block content %}
+
+    <!-- Landing Page -->
+    <header class="masthead text-white text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Excited to find your next adventure?</h1>
+		      	<p>Experience nature to the fullest!</p>
+		      	<p>Connect with clubs or indep. professionals that organize outdoor activities.</p>
+		      	<p class="hashtags">#risktakers #adventures<p/>
+		      	<div class="col-md-6 col-lg-4 col-xl-3 mx-auto">
+			    	      <button  class="btn btn-block btn-lg btn-warning" >
+                    <a href="{% url 'outdooradventures:createpost'%}">Get Started!</a>
+                  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+  	    <div class="row">
+    			<div class="col-lg-12">
+    			   <img src="../../static/img/purpose.PNG" class="img-fluid" alt="Responsive image">
+          </div>
+  		  </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fas fa-hiking m-auto text-primary"></i>
+              </div>
+              <h4>Pick an adventure</h4>
+              <p class="lead mb-0">What would you like to experience, what outdoor activity do you want to do?</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fas fa-globe-africa m-auto text-primary"></i>
+              </div>
+              <h4>Pick a place</h4>
+              <p class="lead mb-0">In which place do you prefer experiencing you next outdoor adventure?</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-check m-auto text-primary"></i>
+              </div>
+              <h4>Publish your post</h4>
+              <p class="lead mb-0">Fill in the form, post it and offers will reach you!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/sailing.png');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/sup.jpg');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/windsurfing.jpg');"></div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/mountain.jpg');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/bungee.jpg');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/flying.jpg');"></div>
+        </div>
+		    <div class="row no-gutters">
+          <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/skiing.jpg');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/climbing.jpg');"></div>
+    		  <div class="col-lg-4 col-md-4 text-white showcase-img" style="background-image: url('../../static/img/hiking.jpg');"></div>
+        </div>
+      </div>
+    </section>
+
+	<!-- message and user guidelines -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+    		<div class="row">
+    			<div class="col-lg-12">
+    			   <img src="../../static/img/message.PNG" class="img-fluid" alt="Responsive image">
+          </div>
+    		</div>
+    		<div class="row">
+    			<div class="col-lg-12">
+    			   <img src="../../static/img/example.png" class="img-fluid" alt="Responsive image">
+    			</div>
+    		</div>
+      </div>
+    </section>
+
+
+{% endblock %}
