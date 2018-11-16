@@ -8,13 +8,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from .models import *
 from django.views.decorators.csrf import csrf_protect
-
+from .forms import CreatePostForm
 
 def index(request):
     template = loader.get_template('outdooradventures/index.html')
     return HttpResponse(template.render({},request))
 
-@csrf_protect
+
 def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -31,7 +31,7 @@ def login(request):
             print('user does not exist')
             print(request.session.items())
 
-    return redirect()
+    return render(request, 'outdooradventures/index.html')
 
 
 def register(request):
@@ -71,11 +71,18 @@ def activities(request):
 
 
 def createpost(request):
+
     template = loader.get_template('outdooradventures/createpost.html')
     return HttpResponse(template.render({},request))
 
 
+
+
+
 """for future use
+
+    template = loader.get_template('outdooradventures/createpost.html')
+    return HttpResponse(template.render({},request))
 
 def userprofile(request, user_id):
     user = get_object_or_404(User, pk=user_id)
